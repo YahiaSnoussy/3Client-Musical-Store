@@ -1,0 +1,80 @@
+{% extends '1base.html.twig' %}
+
+{% block title %}Piste index{% endblock %}
+{% block body %}
+
+
+    <h1>Piste index</h1>
+    <table class="table" id="tab">
+        <thead>
+            <tr0>
+                <th>Name</th>
+                <th>preview</th>
+                <th>Prix</th>
+                <th>Description</th>
+                <th>Ajouter au panier</th>
+            </tr0>
+        </thead>
+        <tbody>
+        {% for piste in pistes %}
+            <a>
+                <td class="active">{{ piste.name }}</td>
+                <td>
+                    <a href="{{ path('piste_show', {'id': piste.id}) }}">
+                    <img src={{ piste.thumbnail }} width="50" height="30">
+                    </a>
+                </td>
+                <td>{{ piste.prix }}</td>
+                <td>{{ piste.description }}</td>
+                <td>
+                    <a href="{{ path('piste_add', {'id': piste.id}) }}">
+                    <img src="https://img.icons8.com/fluent/48/000000/add-basket.png" width="40" height="30">
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+         </a>
+        </tbody>
+    </table>
+
+    <a href="{{ path('piste_new') }}">Ajouter une piste</a>
+    <script  type="text/javascript">
+        let search = document.getElementById("search");
+        search.oninput = function () {
+            if(search.value!='') {
+
+                const render = async () => {
+                    const highlight = () => {
+                        $('.active').each(function () {
+                            $(this).html($(this).html().replace(new RegExp(search.value, "g"),
+                                "<span class = 'highlight'>" + search.value + "</span>"));
+                        });
+                    }
+                    const reload = () => {
+                        //$('#tab').load(route);
+
+                        $('#tab').load("http://mstore.com:8000/piste/" + search.value + "/search" + ' #tab');
+                    }
+                     reload();
+                    await new Promise(resolve => {
+                        setTimeout(() => {
+                            resolve('resolved');
+                        }, 900);
+                    });
+                     highlight();
+
+                }
+                render();
+
+            }
+            else $('#tab').load("http://mstore.com:8000/piste/ç_&éè<&àçé546é&&/search" +  ' #tab');
+
+        }
+
+    </script>
+
+{% endblock %}

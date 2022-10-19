@@ -1,0 +1,11 @@
+{% extends '1base.html.twig' %}
+
+{% block title %}New Piste{% endblock %}
+
+{% block body %}
+    <h1>Create new Piste</h1>
+
+    {{ include('piste/_form.html.twig') }}
+
+    <a href="{{ path('piste_index') }}">back to list</a>
+{% endblock %}

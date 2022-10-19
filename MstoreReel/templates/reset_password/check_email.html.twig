@@ -1,0 +1,22 @@
+{% extends 'conn.html.twig' %}
+
+{% block title %}Password Reset Email Sent{% endblock %}
+{% block limiter %}
+<div class="limiter">
+    <div class="container-login100"  style="background-image: url('images/5-of-the-best-password-reset-emails.png');">
+
+        <div class="wrap-login100 p-t-30 p-b-50">
+            {% endblock %}
+            {% block h %}
+                <span class="login100-form-title p-b-41">
+					Reset your password
+				</span>
+            {% endblock %}
+
+{% block body %}
+    <p class="text-light">
+        An email has been sent that contains a link that you can click to reset your password.
+        This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p class="text-light">If you don't receive an email please check your spam folder or <a href="{{ path('app_forgot_password_request') }}">try again</a>.</p>
+{% endblock %}

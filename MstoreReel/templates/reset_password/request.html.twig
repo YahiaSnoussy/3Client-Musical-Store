@@ -1,0 +1,42 @@
+{% extends 'conn.html.twig' %}
+
+{% block title %}Reset your password{% endblock %}
+{% block limiter %}
+<div class="limiter">
+    <div class="container-login100"  style="background-image: url('images/5-of-the-best-password-reset-emails.png');">
+
+        <div class="wrap-login100 p-t-30 p-b-50">
+            {% endblock %}
+ {% block h %}
+     <span class="login100-form-title p-b-41">
+					Reset your password
+				</span>
+ {% endblock %}
+{% block body %}
+    {% for flashError in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+<div class="container-login50" >
+<div class="text-light">
+
+    {{ form_start(requestForm) }}
+        {{ form_row(requestForm.email) }}
+    </div>
+        <div>
+            <small class="text-danger">
+                Enter your email address and we we will send you a
+                link to reset your password.
+            </small>
+        </div>
+</div>
+            <div class="container-login100-form-btn m-t-32">
+        <button class="login100-form-btn">Send password reset email</button>
+                </div> <br> <br>
+                  <div class=""container-login100-form-btn m-t-32">
+
+        <a href="{{ path('home')}}"class="login100-form-btn">
+            Back</a>
+    </div>
+    {{ form_end(requestForm) }}
+{% endblock %}

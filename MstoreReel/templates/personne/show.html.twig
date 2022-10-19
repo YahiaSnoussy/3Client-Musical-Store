@@ -1,0 +1,55 @@
+{% extends 'backoffice.html.twig' %}
+
+{% block title %}Personne{% endblock %}
+
+{% block body %}
+    <h1>{{ personne.nom }} {{ personne.prenom }}</h1>
+
+    <table class="table" >
+        <tbody>
+            <tr class="text-light">
+                <th>Id</th>
+                <td>{{ personne.id }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Nom</th>
+                <td>{{ personne.nom }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Prenom</th>
+                <td>{{ personne.prenom }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Role</th>
+                <td>{{ personne.role }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Email</th>
+                <td>{{ personne.email }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Username</th>
+                <td>{{ personne.username }}</td>
+            </tr>
+            <tr class="text-light">
+                <th>Password</th>
+                <td>{{ personne.password }}</td>
+            </tr>
+            <tr class="text-light">
+
+                <td><img src ="{{ asset('uploads/images/' ~ personne.photo) }}"
+                         alt =""  width="200" height="200"></td>
+            </tr>
+            <tr class="text-light">
+                <th>NumTelephone</th>
+                <td>{{ personne.numTelephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('personne_index') }}">back to list</a> |
+
+    <a href="{{ path('personne_edit', {'id': personne.id}) }}">edit</a>
+
+    {{ include('personne/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends '1base.html.twig' %}
+
+{% block title %}Carteb index{% endblock %}
+
+{% block body %}
+    <h1>Carteb index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numcarte</th>
+                <th>Ccv</th>
+                <th>Nom</th>
+                <th>Dateexp</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carteb in cartebs %}
+            <tr>
+                <td>{{ carteb.id }}</td>
+                <td>{{ carteb.numcarte }}</td>
+                <td>{{ carteb.ccv }}</td>
+                <td>{{ carteb.nom }}</td>
+                <td>{{ carteb.dateexp ? carteb.dateexp|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('carteb_show', {'id': carteb.id}) }}">show</a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('carteb_new') }}">Create new</a>
+{% endblock %}

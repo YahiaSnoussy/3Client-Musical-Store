@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notification{% endblock %}
+
+{% block body %}
+    <h1>Les personne qui ont oublié leurs mot de passe</h1>
+
+    <table class="table">
+        <thead>
+            <tr class="text-light">
+
+                <th>Emailtoreply</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for notification in notifications %}
+            <tr class="text-light">
+
+                <td>{{ notification.emailtoreply }}</td>
+                <td>
+                    <a href="{{ path('notification_show', {'id': notification.id}) }}">show</a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('notification_new') }}">Create new</a>
+
+{% endblock %}

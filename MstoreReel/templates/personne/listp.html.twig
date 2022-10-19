@@ -1,0 +1,27 @@
+{% block body %}
+    <h1 align="center">Liste des personnes</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Numero de telephone</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        {% for personne in personnes %}
+            <tr>
+                <td>{{ personne.nom }}</td>
+                <td>{{ personne.prenom }}</td>
+                <td>{{ personne.role }}</td>
+                <td>{{ personne.email }}</td>
+                <td>{{ personne.numTelephone }}</td>
+
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}

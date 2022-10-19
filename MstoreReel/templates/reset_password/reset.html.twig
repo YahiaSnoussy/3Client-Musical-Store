@@ -1,0 +1,23 @@
+{% extends 'conn.html.twig' %}
+
+{% block title %}Reset your password{% endblock %}
+{% block limiter %}
+<div class="limiter">
+    <div class="container-login100"  style="background-image: url('images/5-of-the-best-password-reset-emails.png');">
+
+        <div class="wrap-login100 p-t-30 p-b-50">
+            {% endblock %}
+            {% block h %}
+                <span class="login100-form-title p-b-41">
+					Reset your password
+				</span>
+            {% endblock %}
+
+{% block body %}
+
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.plainPassword) }}
+        <button class="btn btn-primary">Reset password</button>
+    {{ form_end(resetForm) }}
+{% endblock %}

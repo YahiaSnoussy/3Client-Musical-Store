@@ -1,0 +1,77 @@
+{% extends '1base.html.twig' %}
+{% block head %}
+
+
+{% endblock %}
+{% block title %}Livreur{% endblock %}
+
+{% block body %}
+    <h1>Livreur</h1>
+    <div id="map" class="map">
+    <script type="text/javascript">
+
+        var iconFeature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.transform([10.302880, 36.723130], 'EPSG:4326', 'EPSG:3857')),
+        });
+
+
+        var iconStyle = new ol.style.Style({
+            image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+                anchor: [0.5, 46],
+                anchorXUnits: 'fraction',
+                anchorYUnits: 'pixels',
+                opacity: 0.75,
+                src: 'https://img.icons8.com/dusk/64/000000/marker.png'
+            }))
+        });
+
+        iconFeature.setStyle(iconStyle);
+
+        var vectorSource = new ol.source.Vector({
+            features: [iconFeature]
+        });
+
+        var vectorLayer = new ol.layer.Vector({
+            source: vectorSource
+        });
+        let map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                }),
+                vectorLayer
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([10.302880,36.723130 ]),
+                zoom: 15
+            })
+        });
+    </script></div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ livreur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ livreur.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ livreur.img }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('livreur_index') }}">back to list</a>
+
+    <a href="{{ path('livreur_edit', {'id': livreur.id}) }}">edit</a>
+
+    {{ include('livreur/_delete_form.html.twig') }}
+{% endblock %}

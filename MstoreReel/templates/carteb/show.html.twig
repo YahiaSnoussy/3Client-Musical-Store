@@ -1,0 +1,38 @@
+{% extends '1base.html.twig' %}
+
+{% block title %}Carteb{% endblock %}
+
+{% block body %}
+    <h1>Carteb</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ carteb.id }}</td>
+            </tr>
+            <tr>
+                <th>Numcarte</th>
+                <td>{{ carteb.numcarte }}</td>
+            </tr>
+            <tr>
+                <th>Ccv</th>
+                <td>{{ carteb.ccv }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ carteb.nom }}</td>
+            </tr>
+            <tr>
+                <th>Dateexp</th>
+                <td>{{ carteb.dateexp ? carteb.dateexp|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('carteb_index') }}">back to list</a>
+
+    <a href="{{ path('carteb_edit', {'id': carteb.id}) }}">edit</a>
+
+    {{ include('carteb/_delete_form.html.twig') }}
+{% endblock %}

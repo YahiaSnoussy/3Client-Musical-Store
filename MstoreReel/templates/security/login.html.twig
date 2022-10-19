@@ -1,0 +1,70 @@
+{% extends 'conn.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href={{asset("/")}} > The M-Store Lab </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+
+        </div>
+    </nav>
+{% endblock %}
+
+
+ {% block h %}
+     <span class="login100-form-title p-b-41">
+					Account Login
+				</span>
+ {% endblock %}
+{% block body %}
+    <style>
+        input::placeholder {
+            text-align: center;
+        }
+        input::-ms-input-placeholder {
+            text-align: center;
+        }
+        input:-ms-input-placeholder {
+            text-align: center;
+        }
+    </style>
+    <form action="{{ path('app_login') }}" method="post"
+          class="login100-form validate-form p-b-33 p-t-5">
+
+
+            {% if error %}
+                <div class="alert alert-danger"> Sorry , your password or username is incorrect <br> <br>
+                  <small class="center"> Please , try again!</small>  </div>
+            {% endif %}
+
+        <div class="wrap-input100 validate-input" data-validate = "Enter username" >
+            <input class="input100"  value="{{ last_username }}" placeholder="Votre nom d'utilisateur" required name="_username" type="text" >
+            <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <input class="input100" placeholder="Votre mot de passe" required name="_password" type="password" >
+            <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+
+        </div>
+        <div class="container-login100-form-btn m-t-32">
+            <button class="login100-form-btn" type="submit">
+                Sign in
+            </button>
+<br>
+
+                <div class="container-login100-form-btn m-t-32">
+
+                    <a href="{{ path('home')}}"class="login100-form-btn"><i class="bi bi-printer-fill"></i>
+                        Back</a>
+                </div>
+
+
+
+
+    </form>
+{% endblock %}

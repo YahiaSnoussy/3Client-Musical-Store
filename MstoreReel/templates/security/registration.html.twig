@@ -1,0 +1,76 @@
+{% extends 'conn.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+{% block limiter %}
+<div class="limiter">
+    <div class="container-login100"  style="background-image: url('images/08.jpg');">
+
+        <div class="wrap-login100 p-t-30 p-b-50">
+            {% endblock %}
+ {% block h %}
+     <span class="login100-form-title p-b-41">
+					Inscription :
+				</span>
+ {% endblock %}
+{% block body %}
+
+
+
+
+    {{ form_start(form) }}
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+        <div class="text-light">
+    {{ form_row(form.nom , {'label':'Nom','attr': {'placeholder':'Votre nom ...'}}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.prenom , {'label':'Prenom','attr': {'placeholder':'Votre prenom ...'}}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.role , {'label':'Role','value':'User'}) }}
+</div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.email , {'label':'Email','attr': {'placeholder':'Votre email ...'}}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.username , {'label':'Nom d\'utilisateur','attr': {'placeholder':'Votre nom d\'utilisateur ...'}}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.password , {'label':'Mot de passe ','attr': {'placeholder':'Votre mot de passe ...'}}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+<div class="text-light">
+    {{ form_row(form.confirm_password , {'label':'Confirmer mot de passe','attr': {'placeholder':'Confirmer mot de passe ...'}}) }}
+    </div> </div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.photo , {'label':'Photo'}) }}
+    </div></div>
+    <div class="wrap-input100 validate-input"  >
+        <div class="text-light">
+    {{ form_row(form.numTelephone , {'label':'Numero de telephone','attr': {'placeholder':'Votre Numero de telephone ...'}}) }}
+    </div></div>
+<div class="text-light">
+    <div class="container-login100-form-btn m-t-32">
+        <button class="login100-form-btn" type="submit">
+            Sign up
+        </button>
+        <br>
+        <br>
+
+        <div class=""container-login100-form-btn m-t-32">
+
+        <a href="{{ path('home')}}"class="login100-form-btn">
+            Back</a>
+    </div>
+    </div>
+
+    {{  form_end(form) }}
+    </div>
+
+{% endblock %}
