@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="holderPane" prefHeight="600.0" prefWidth="894.0" style="-fx-background-color: #3498db" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.ListProduct2Controller">
+    <stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets>
+  <children>
+      <ImageView fitHeight="900" fitWidth="900" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/system/Studio.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image1" fitHeight="140.0" fitWidth="317.0" layoutX="86.0" layoutY="63.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Label fx:id="label1" layoutX="159.0" layoutY="35.0" prefHeight="28.0" prefWidth="192.0" text="Label" textAlignment="CENTER" textFill="#c96800">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn1_product" layoutX="172.0" layoutY="232.0" mnemonicParsing="false" onAction="#affichage_1" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="En savoir plus " textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" height="54.43" radius="20.2575" width="28.6" />
+         </effect>
+      </Button>
+      <ImageView fx:id="image3" fitHeight="140.0" fitWidth="344.0" layoutX="83.0" layoutY="390.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Label fx:id="label3" layoutX="149.0" layoutY="349.0" prefHeight="28.0" prefWidth="241.0" text="Label" textAlignment="CENTER" textFill="#c96800">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn3_product" layoutX="172.0" layoutY="554.0" mnemonicParsing="false" onAction="#affichage_3" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="En savoir plus " textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" height="54.43" radius="20.2575" width="28.6" />
+         </effect>
+      </Button>
+      <ImageView fx:id="image4" fitHeight="140.0" fitWidth="350.0" layoutX="545.0" layoutY="390.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Label fx:id="label4" layoutX="615.0" layoutY="349.0" prefHeight="28.0" prefWidth="241.0" text="Label" textAlignment="CENTER" textFill="#c96800">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn4_product" layoutX="598.0" layoutY="554.0" mnemonicParsing="false" onAction="#affichage_4" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="En savoir plus " textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" height="54.43" radius="20.2575" width="28.6" />
+         </effect>
+      </Button>
+      <ImageView fx:id="productsuivant" fitHeight="42.0" fitWidth="50.0" layoutX="843.0" layoutY="280.0" onMouseClicked="#suivant_product" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="productprecedent" fitHeight="49.0" fitWidth="50.0" layoutX="14.0" layoutY="356.0" onMouseClicked="#product_precedent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/previous.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image2" fitHeight="140.0" fitWidth="339.0" layoutX="550.0" layoutY="63.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Label fx:id="label2" layoutX="624.0" layoutY="35.0" prefHeight="28.0" prefWidth="241.0" text="Label" textAlignment="CENTER" textFill="#c96800">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn2_product" layoutX="598.0" layoutY="232.0" mnemonicParsing="false" onAction="#affichage_2" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="En savoir plus " textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" height="54.43" radius="20.2575" width="28.6" />
+         </effect>
+      </Button>
+      <ImageView fx:id="image11" fitHeight="64.0" fitWidth="317.0" layoutX="315.0" layoutY="3.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/past.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Btn_Return" layoutX="45.0" layoutY="14.0" mnemonicParsing="false" text="Retour" />
+      <Button fx:id="Btn_add" layoutX="373.0" layoutY="14.0" mnemonicParsing="false" text="Ajouter un produit" />
+   </children>
+</AnchorPane>

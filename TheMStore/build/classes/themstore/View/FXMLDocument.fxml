@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.FXMLDocumentController">
+   <children>
+      <Button fx:id="ajouterreclam" layoutX="512.0" layoutY="178.0" mnemonicParsing="false" onAction="#ajouter_réclamation" prefHeight="69.0" prefWidth="268.0" text="ajouter votre réclamation" />
+      <TextField fx:id="writereclam" layoutX="42.0" layoutY="154.0" onAction="#réclam" prefHeight="183.0" prefWidth="365.0" promptText="          écrire votre réclamation" />
+      <Label graphicTextGap="10.0" layoutX="344.0" layoutY="17.0" prefHeight="97.0" prefWidth="210.0" text="Hello" textAlignment="JUSTIFY">
+         <font>
+            <Font size="44.0" />
+         </font></Label>
+      <Button fx:id="listereclam" layoutX="42.0" layoutY="422.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="149.0" text="Retour" />
+      <Button fx:id="logout" layoutX="689.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Logout" />
+      <TextField fx:id="sujet" layoutX="42.0" layoutY="89.0" promptText="sujet" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

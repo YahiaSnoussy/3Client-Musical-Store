@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="594.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.UpdateDeleteUserController">
+<stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets>  
+    <children>
+        <ImageView fitHeight="399.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Studio.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_update" layoutX="447.0" layoutY="355.0" mnemonicParsing="false" text="Update" />
+      <Button fx:id="retour" layoutX="522.0" layoutY="355.0" mnemonicParsing="false" text="Retour" />
+      <Label layoutX="219.0" layoutY="38.0" text="Update personne :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="102.0" layoutY="96.0" text="Nom :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="135.0" text="Prenom :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="170.0" text="Role :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="213.0" text="Adresse mail :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="245.0" text="Username :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="287.0" text="Password :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="322.0" text="Photo :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="364.0" text="Numero de telephone :" textFill="WHITE" />
+      <TextField fx:id="prenom" layoutX="240.0" layoutY="127.0" />
+      <TextField fx:id="email" layoutX="240.0" layoutY="205.0" />
+      <TextField fx:id="username" layoutX="240.0" layoutY="242.0" prefHeight="25.0" prefWidth="151.0" />
+      <TextField fx:id="password" layoutX="240.0" layoutY="279.0" prefHeight="17.0" prefWidth="151.0" />
+      <TextField fx:id="num" layoutX="240.0" layoutY="356.0" />
+      <TextField fx:id="nom" layoutX="240.0" layoutY="88.0" />
+      <TextField fx:id="role" layoutX="240.0" layoutY="166.0" />
+      <ImageView fitHeight="100.0" fitWidth="94.0" layoutX="8.0" layoutY="10.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/151946201_2890140684563446_6490761183579620194_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="166.0" layoutX="415.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/klipartz.com.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="photo" layoutX="240.0" layoutY="316.0" />
+   </children>
+</AnchorPane>

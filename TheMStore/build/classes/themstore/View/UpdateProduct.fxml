@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="900" style="-fx-background-color: #3498db" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.UpdateProductController">
+    <stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets>
+    <children>
+        <ImageView fitHeight="900" fitWidth="900" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/system/Studio.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="424.0" prefWidth="680.0" style="-fx-border-color: #00000000;">
+         <children>
+            <Label layoutX="53.0" layoutY="41.0" text="Label :" textFill="#fdfdfd">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="53.0" layoutY="82.0" text="Price :" textFill="#fdfdfd">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="53.0" layoutY="149.0" text="Description :" textFill="#fdfdfd">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="55.0" layoutY="227.0" text="Image URL :" textFill="#fdfdfd">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <TextField fx:id="LabelText" layoutX="223.0" layoutY="41.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="PriceText" layoutX="223.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0" />
+            
+            <Button fx:id="update" layoutX="87.0" layoutY="368.0" mnemonicParsing="false" onAction="#update" text="Update" />
+            <Button fx:id="Btn_Return" layoutX="414.0" layoutY="368.0" mnemonicParsing="false" text="Retour" />
+            <ImageView fx:id="image" fitHeight="136.0" fitWidth="208.0" layoutX="219.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="DescriptionText" layoutX="223.0" layoutY="123.0" prefHeight="57.0" prefWidth="200.0" />
+            <Button fx:id="image1" layoutX="456.0" layoutY="246.0" mnemonicParsing="false" onAction="#image" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #008CBA;" text="upload image" textFill="WHITE">
+               <effect>
+                  <Reflection fraction="0.69" topOpacity="0.0">
+                     <input>
+                        <SepiaTone />
+                     </input>
+                  </Reflection>
+               </effect>
+            </Button>
+            
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

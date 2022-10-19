@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="780.0" style="-fx-background-color: #1BB3CC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.ModActuController">
+   <stylesheets>
+        <URL value="@views.css" />
+    </stylesheets>
+    <children>
+      <HTMLEditor fx:id="actuView" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="34.0" layoutY="285.0" prefHeight="242.0" prefWidth="565.0" style="-fx-background-color: #1BB3CC;" />
+      <Button fx:id="modBtn" layoutX="540.0" layoutY="537.0" mnemonicParsing="false" text="mofifier" />
+      <TextField fx:id="searchTxt" layoutX="35.0" layoutY="36.0" prefHeight="25.0" prefWidth="275.0" />
+      <TableView fx:id="listTab" layoutX="35.0" layoutY="85.0" prefHeight="188.0" prefWidth="373.0">
+        <columns>
+          <TableColumn fx:id="id_col" text="categorie" />
+          <TableColumn fx:id="cat_col" prefWidth="191.0" text="body" />
+            <TableColumn fx:id="date_col" prefWidth="101.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="supBtn" layoutX="496.0" layoutY="245.0" mnemonicParsing="false" style="-fx-background-color: #ff0000;" text="supprimer" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="558.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@music-key-notes-icon-by-vexels.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="home" layoutX="714.0" layoutY="14.0" mnemonicParsing="false" text="home" />
+   </children>
+</AnchorPane>

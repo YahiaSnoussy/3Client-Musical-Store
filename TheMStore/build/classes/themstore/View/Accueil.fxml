@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.AccueilController">
+<stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets>  
+    <children>
+       <ImageView fitHeight="399.0" fitWidth="655.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Studio.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="status" layoutX="390.0" layoutY="336.0" mnemonicParsing="false" onAction="#statusDB" prefHeight="25.0" prefWidth="165.0" text="Check Connection" />
+      <Button fx:id="login" layoutX="168.0" layoutY="252.0" mnemonicParsing="false" onAction="#EnterCP" prefHeight="33.0" prefWidth="142.0" text="Se connecter" />
+      <Label layoutX="66.0" layoutY="340.0" text="DataBase Status" textFill="WHITE" />
+      <Label layoutX="39.0" layoutY="159.0" text="Username :" textFill="WHITE" />
+      <Label layoutX="39.0" layoutY="208.0" text="Password :" textFill="WHITE" />
+      <Label fx:id="check" layoutX="97.0" layoutY="234.0" prefHeight="17.0" prefWidth="284.0" textFill="WHITE" underline="true" />
+      <Label fx:id="dbConlb" layoutX="167.0" layoutY="340.0" prefHeight="17.0" prefWidth="199.0" textFill="#1100ff" underline="true" />
+      <TextField fx:id="username" layoutX="168.0" layoutY="152.0" promptText="Nom d'utilisateur" />
+       <PasswordField fx:id="password" layoutX="168.0" layoutY="201.0" promptText="Mot de passe" />
+      <ImageView fitHeight="150.0" fitWidth="165.0" layoutX="390.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Authentification.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="130.0" layoutX="247.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/151946201_2890140684563446_6490761183579620194_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="440.0" layoutY="261.0" text="LOGIN" textFill="#07a5fa">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hyperinsc" layoutX="181.0" layoutY="293.0" onAction="#insc" text="T'as pas de compte?" textFill="#0015ff" />
+      <Hyperlink layoutX="178.0" layoutY="316.0" onAction="#oub" text="Mot de passe oublié?" textFill="#0015ff" />
+     
+   </children>
+</Pane>

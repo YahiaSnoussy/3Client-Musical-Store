@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="themstore.Controller.ListOublieController">
+  <stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets> 
+    <children>
+      
+      <TableView fx:id="table" layoutX="23.0" layoutY="100.0" prefHeight="200.0" prefWidth="557.0">
+        <columns>
+          <TableColumn fx:id="adressmail" prefWidth="404.0" text="Email" />
+          <TableColumn fx:id="idd" prefWidth="152.0" text="Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="513.0" layoutY="346.0" mnemonicParsing="false" text="Retour" />
+      <Button layoutX="266.0" layoutY="334.0" mnemonicParsing="false" onAction="#SupprimerMsg" text="Supprimer" />
+   </children>
+</AnchorPane>
